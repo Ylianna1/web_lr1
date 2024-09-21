@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;   
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+
+}
+
+body{
+    background-color: #DCDCDC;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #202846;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    width: 120px;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #ffff;
+    text-decoration: none;
+    border-right: .2rem solid white;
+}
+
+header .navbar a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+header .navbar .lang{
+    background-color: #202846;
+    color: #ffff;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid white;
+    display: none;
+}
+
+section{
+    margin: 10%;
+    padding: 2rem 9%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 369px; 
+    background: url(foto/banner-image.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 100rem;
+}
+
+.home .content h1{
+    font-size: 6rem;
+    color: #ffff;
+}
+
+.home .content span{
+    font-size: 3rem;
+    color: #ffff;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+.about{
+    display: flex;
+    align-items:end;
+    min-height: 604px; 
+    background: url(foto/banner_2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+
+.about .content p{
+    opacity: 80%;
+
+    background-color: #ffff;
+    font-size: 2rem;
+    color: #202846;
+    padding: 4%;
+    line-height: 1.5;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #202846;
+    color: #ffff;
+    padding: 2.5rem 2.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.btn:hover{
+    background: #ffff;
+    color: #202846;
+}
+
+.info{
+    background: #C1C1C3;
+}
+
+.info .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.info .row .foto{
+    flex: 1 1 40rem;
+}
+
+.info .row .foto img{
+    width: 100%;
+    height: 349px;
+    object-fit: cover;
+}
+
+.info .row .content{
+    background-color: #fff;
+    height: 349px;
+    flex: 1 1 40rem;
+    text-align: center;
+    align-content: center;
+    padding: 2%;
+}
+
+.info .row .content p{
+    font-size: 2.5rem;
+    color: #202846;
+    line-height: 1.5;
+}
+
+footer{
+    background-color: #202846;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+}
+
+footer p{
+    color: #ffff;
+    font-size: 2rem;
+}
+
+
+
+
+
+@media (max-width:884px){
+    
+    html{
+        font-size: 55%;   
+    }
+    header{
+        padding: 1rem;
+    }
+
+    section{
+        margin-top: 20%;
+        padding: 1rem;
+    }
+    
+    .home .content h1{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2rem;
+    }
+
+    .contact{
+        background-color:#F2EEEE ;
+        align-content: center;
+        width: 418px;
+    }     
+}
+
+@media (max-width:768px){
+    
+    header .fa-bars{
+        display: block; 
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #202846;
+        border-top: .1rem solid white;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #202846;
+        border: .1rem solid #202846;
+        display: block;
+    }
+
+    header .navbar .lang{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+    }
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;   
+    }
+}
